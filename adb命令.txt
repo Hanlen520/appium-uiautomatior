@@ -1,95 +1,94 @@
-°²×°apk
-adb push xxxx.apk /system/app.     //¸²¸Ç°²×°
-adb Install XXX.apk     //  data/app Ä¿Â¼
-adb install -r /home/SoundRecorder.apk     //×¢£º -r ±íÊ¾Ç¿ÖÆ°²×°   
-adb shell monkey -p com.htc.Weather 100    // ÖÆ¶¨°ü100´Ì
-adb shell monkey -p com.htc.Weather ¨Cp com.htc.pdfreader  -p com.htc.photo.widgets 100
-¶à¸ö°ü
-adb shellmonkey -p com.htc.Weather ¨Cv 100   ÈÕÖ¾¼¶±ğ0
-adb shellmonkey -p com.htc.Weather ¨Cv -v 100  ÈÕÖ¾¼¶±ğ1
-adb shellmonkey -p com.htc.Weather ¨Cv -v ¨Cv 100   ×î¸ß¼¶±ğ
-£º  -s
-¡¡ÓÃÓÚÖ¸¶¨Î±Ëæ»úÊıÉú³ÉÆ÷µÄseedÖµ£¬Èç¹ûseedÏàÍ¬£¬ÔòÁ½´ÎMonkey²âÊÔËù²úÉúµÄÊÂ¼şĞòÁĞÒ²ÏàÍ¬µÄ¡£
---throttle <ºÁÃë>
-ÓÃÓÚÖ¸¶¨ÓÃ»§²Ù×÷£¨¼´ÊÂ¼ş£©¼äµÄÊ±ÑÓ£¬µ¥Î»ÊÇºÁÃë£»
-Ê¾Àı£ºadb shell monkey -p com.htc.Weather ¨Cthrottle 3000 100
+å®‰è£…apk
+adb push xxxx.apk /system/app.     //è¦†ç›–å®‰è£…
+adb Install XXX.apk     //  data/app ç›®å½•
+adb install -r /home/SoundRecorder.apk     //æ³¨ï¼š -r è¡¨ç¤ºå¼ºåˆ¶å®‰è£…   
+adb shell monkey -p com.htc.Weather 100    // åˆ¶å®šåŒ…100åˆº
+adb shell monkey -p com.htc.Weather â€“p com.htc.pdfreader  -p com.htc.photo.widgets 100
+å¤šä¸ªåŒ…
+adb shellmonkey -p com.htc.Weather â€“v 100   æ—¥å¿—çº§åˆ«0
+adb shellmonkey -p com.htc.Weather â€“v -v 100  æ—¥å¿—çº§åˆ«1
+adb shellmonkey -p com.htc.Weather â€“v -v â€“v 100   æœ€é«˜çº§åˆ«
+ï¼š  -s
+ã€€ç”¨äºæŒ‡å®šä¼ªéšæœºæ•°ç”Ÿæˆå™¨çš„seedå€¼ï¼Œå¦‚æœseedç›¸åŒï¼Œåˆ™ä¸¤æ¬¡Monkeyæµ‹è¯•æ‰€äº§ç”Ÿçš„äº‹ä»¶åºåˆ—ä¹Ÿç›¸åŒçš„ã€‚
+--throttle <æ¯«ç§’>
+ç”¨äºæŒ‡å®šç”¨æˆ·æ“ä½œï¼ˆå³äº‹ä»¶ï¼‰é—´çš„æ—¶å»¶ï¼Œå•ä½æ˜¯æ¯«ç§’ï¼›
+ç¤ºä¾‹ï¼šadb shell monkey -p com.htc.Weather â€“throttle 3000 100
 adb shell monkey -p com.tmall.wireless -v -v -pct-touch 50 -pct-trackball 30 -throttle 300 100
-ÓÃmonkey²âÊÔÌìÃ¨µÄÕâ¸ö°ü´¥Ãş²Ù×÷°Ù·ÖÖ®50£¬¹ì¼£Çò²Ù×÷°Ù·ÖÖ®30£¬ÆäËü²Ù×÷°Ù·ÖÖ®20£¬×Ü¹²½øĞĞ100´ÎËæ»úµã»÷£¬ÊÂ¼şÖ®¼ä¼ä¸ô300ms
-adb shell dumpsys cpuinfo | grep packagename¼à¿ØÁ÷Á¿
-adb shell dumpsys cpuinfo   ËùÓĞ½ø³ÌµÄcpuÕ¼ÓĞÂÊ
-adb shell dumpsys cpuinfo |grep packagename   É¸Ñ¡ÄãÏëÒª¿´µÄ
-adb shell È»ºó top -m 10 -s cpu Õ¼ÓÃcpu×î¸ßµÄ
--t ÏÔÊ¾½ø³ÌÃû³Æ£¬-s °´Ö¸¶¨ĞĞÅÅĞò£¬-n ÔÚÍË³öÇ°Ë¢ĞÂ¼¸´Î£¬-d Ë¢ĞÂ¼ä¸ô£¬-m ÏÔÊ¾×î´óÊıÁ¿
-adb shell dumpsys meminfo |grep packagename >/address/mem.txt  ÄÚ´æ
+ç”¨monkeyæµ‹è¯•å¤©çŒ«çš„è¿™ä¸ªåŒ…è§¦æ‘¸æ“ä½œç™¾åˆ†ä¹‹50ï¼Œè½¨è¿¹çƒæ“ä½œç™¾åˆ†ä¹‹30ï¼Œå…¶å®ƒæ“ä½œç™¾åˆ†ä¹‹20ï¼Œæ€»å…±è¿›è¡Œ100æ¬¡éšæœºç‚¹å‡»ï¼Œäº‹ä»¶ä¹‹é—´é—´éš”300ms
+adb shell dumpsys cpuinfo   æ‰€æœ‰è¿›ç¨‹çš„cpuå æœ‰ç‡
+adb shell dumpsys cpuinfo |grep packagename   ç­›é€‰ä½ æƒ³è¦çœ‹çš„
+adb shell ç„¶å top -m 10 -s cpu å ç”¨cpuæœ€é«˜çš„
+-t æ˜¾ç¤ºè¿›ç¨‹åç§°ï¼Œ-s æŒ‰æŒ‡å®šè¡Œæ’åºï¼Œ-n åœ¨é€€å‡ºå‰åˆ·æ–°å‡ æ¬¡ï¼Œ-d åˆ·æ–°é—´éš”ï¼Œ-m æ˜¾ç¤ºæœ€å¤§æ•°é‡
+adb shell dumpsys meminfo |grep packagename >/address/mem.txt  å†…å­˜
      
   
-monkey -p com.android.mms --throttle 1000 -s 100--ignore-crashes --ignore-timeouts --ignore-security-exceptions--ignore-native-crashes --monitor-native-crashes -v -v -v 15000 >/mnt/sdcard/monkey_test.txt ¶Ôµ¥¸öapkºöÂÔÒì³£
+monkey -p com.android.mms --throttle 1000 -s 100--ignore-crashes --ignore-timeouts --ignore-security-exceptions--ignore-native-crashes --monitor-native-crashes -v -v -v 15000 >/mnt/sdcard/monkey_test.txt å¯¹å•ä¸ªapkå¿½ç•¥å¼‚å¸¸
 
 --throttle<milliseconds>
-ÔÚÊÂ¼şÖ®¼ä²åÈë¹Ì¶¨ÑÓ³Ù¡£Í¨¹ıÕâ¸öÑ¡Ïî¿ÉÒÔ¼õ»º Monkey µÄÖ´ĞĞËÙ¶È¡£Èç¹û²»Ö¸¶¨¸ÃÑ¡Ïî£¬Monkey ½«²»»á±»ÑÓ³Ù£¬ÊÂ¼ş½«¾¡¿ÉÄÜ¿ìµØ±»²ú³É¡£
-Ê¾Àı£ºadb shell monkey -p com.htc.Weather ¨Cthrottle 3000 100
+åœ¨äº‹ä»¶ä¹‹é—´æ’å…¥å›ºå®šå»¶è¿Ÿã€‚é€šè¿‡è¿™ä¸ªé€‰é¡¹å¯ä»¥å‡ç¼“ Monkey çš„æ‰§è¡Œé€Ÿåº¦ã€‚å¦‚æœä¸æŒ‡å®šè¯¥é€‰é¡¹ï¼ŒMonkey å°†ä¸ä¼šè¢«å»¶è¿Ÿï¼Œäº‹ä»¶å°†å°½å¯èƒ½å¿«åœ°è¢«äº§æˆã€‚
+ç¤ºä¾‹ï¼šadb shell monkey -p com.htc.Weather â€“throttle 3000 100
 --pct-touch<percent>
-µ÷Õû´¥ÃşÊÂ¼şµÄ°Ù·Ö±È(´¥ÃşÊÂ¼şÊÇÒ»¸ö down-up ÊÂ¼ş£¬Ëü·¢ÉúÔÚÆÁÄ»ÉÏµÄÄ³µ¥Ò»Î»ÖÃ)¡£
-Ê¾Àı£ºadb shell monkey -p com.htc.Weather --pct-touch 10 1000
+è°ƒæ•´è§¦æ‘¸äº‹ä»¶çš„ç™¾åˆ†æ¯”(è§¦æ‘¸äº‹ä»¶æ˜¯ä¸€ä¸ª down-up äº‹ä»¶ï¼Œå®ƒå‘ç”Ÿåœ¨å±å¹•ä¸Šçš„æŸå•ä¸€ä½ç½®)ã€‚
+ç¤ºä¾‹ï¼šadb shell monkey -p com.htc.Weather --pct-touch 10 1000
 --pct-motion<percent>
-µ÷Õû¶¯×÷ÊÂ¼şµÄ°Ù·Ö±È(¶¯×÷ÊÂ¼şÓÉÆÁÄ»ÉÏÄ³´¦µÄÒ»¸ö down ÊÂ¼ş¡¢Ò»ÏµÁĞµÄÎ±Ëæ»úÊÂ¼şºÍÒ»¸ö up ÊÂ¼ş×é³É)¡£
-Ê¾Àı£ºadb shell monkey -p com.htc.Weather --pct-motion 20 1000
+è°ƒæ•´åŠ¨ä½œäº‹ä»¶çš„ç™¾åˆ†æ¯”(åŠ¨ä½œäº‹ä»¶ç”±å±å¹•ä¸ŠæŸå¤„çš„ä¸€ä¸ª down äº‹ä»¶ã€ä¸€ç³»åˆ—çš„ä¼ªéšæœºäº‹ä»¶å’Œä¸€ä¸ª up äº‹ä»¶ç»„æˆ)ã€‚
+ç¤ºä¾‹ï¼šadb shell monkey -p com.htc.Weather --pct-motion 20 1000
 --pct-trackball<percent>
-µ÷Õû¹ì¼£ÊÂ¼şµÄ°Ù·Ö±È(¹ì¼£ÊÂ¼şÓÉÒ»¸ö»ò¼¸¸öËæ»úµÄÒÆ¶¯×é³É£¬ÓĞÊ±»¹°éËæÓĞµã»÷)¡£
-Ê¾Àı£ºadb shell monkey -p com.htc.Weather --pct-trackball 30 1000
+è°ƒæ•´è½¨è¿¹äº‹ä»¶çš„ç™¾åˆ†æ¯”(è½¨è¿¹äº‹ä»¶ç”±ä¸€ä¸ªæˆ–å‡ ä¸ªéšæœºçš„ç§»åŠ¨ç»„æˆï¼Œæœ‰æ—¶è¿˜ä¼´éšæœ‰ç‚¹å‡»)ã€‚
+ç¤ºä¾‹ï¼šadb shell monkey -p com.htc.Weather --pct-trackball 30 1000
 --pct-nav<percent>
-µ÷Õû¡°»ù±¾¡±µ¼º½ÊÂ¼şµÄ°Ù·Ö±È(µ¼º½ÊÂ¼şÓÉÀ´×Ô·½ÏòÊäÈëÉè±¸µÄ up/down/left/right ×é³É)¡£
-Ê¾Àı£ºadb shell monkey -p com.htc.Weather --pct-nav 40 1000
+è°ƒæ•´â€œåŸºæœ¬â€å¯¼èˆªäº‹ä»¶çš„ç™¾åˆ†æ¯”(å¯¼èˆªäº‹ä»¶ç”±æ¥è‡ªæ–¹å‘è¾“å…¥è®¾å¤‡çš„ up/down/left/right ç»„æˆ)ã€‚
+ç¤ºä¾‹ï¼šadb shell monkey -p com.htc.Weather --pct-nav 40 1000
 --pct-majornav<percent>
-µ÷Õû¡°Ö÷Òª¡±µ¼º½ÊÂ¼şµÄ°Ù·Ö±È(ÕâĞ©µ¼º½ÊÂ¼şÍ¨³£Òı·¢Í¼ĞÎ½çÃæÖĞµÄ¶¯×÷£¬Èç£º5-way¼üÅÌµÄÖĞ¼ä°´¼ü¡¢»ØÍË°´¼ü¡¢²Ëµ¥°´¼ü)
-Ê¾Àı£ºadb shell monkey -p com.htc.Weather --pct-majornav 50 1000
+è°ƒæ•´â€œä¸»è¦â€å¯¼èˆªäº‹ä»¶çš„ç™¾åˆ†æ¯”(è¿™äº›å¯¼èˆªäº‹ä»¶é€šå¸¸å¼•å‘å›¾å½¢ç•Œé¢ä¸­çš„åŠ¨ä½œï¼Œå¦‚ï¼š5-wayé”®ç›˜çš„ä¸­é—´æŒ‰é”®ã€å›é€€æŒ‰é”®ã€èœå•æŒ‰é”®)
+ç¤ºä¾‹ï¼šadb shell monkey -p com.htc.Weather --pct-majornav 50 1000
 --pct-syskeys<percent>
-µ÷Õû¡°ÏµÍ³¡±°´¼üÊÂ¼şµÄ°Ù·Ö±È(ÕâĞ©°´¼üÍ¨³£±»±£Áô£¬ÓÉÏµÍ³Ê¹ÓÃ£¬Èç Home¡¢Back¡¢Start Call¡¢End Call ¼°ÒôÁ¿¿ØÖÆ¼ü)¡£
-Ê¾Àı£ºadb shell monkey -p com.htc.Weather --pct-syskeys 60 1000
+è°ƒæ•´â€œç³»ç»Ÿâ€æŒ‰é”®äº‹ä»¶çš„ç™¾åˆ†æ¯”(è¿™äº›æŒ‰é”®é€šå¸¸è¢«ä¿ç•™ï¼Œç”±ç³»ç»Ÿä½¿ç”¨ï¼Œå¦‚ Homeã€Backã€Start Callã€End Call åŠéŸ³é‡æ§åˆ¶é”®)ã€‚
+ç¤ºä¾‹ï¼šadb shell monkey -p com.htc.Weather --pct-syskeys 60 1000
 --pct-appswitch<percent>
-µ÷ÕûÆô¶¯ Activity µÄ°Ù·Ö±È¡£ÔÚËæ»ú¼ä¸ôÀï£¬Monkey ½«Ö´ĞĞÒ»¸ö startActivity() µ÷ÓÃ£¬×÷Îª×î´ó³Ì¶È¸²¸Ç°üÖĞÈ«²¿Activity µÄÒ»ÖÖ·½·¨¡£
-Ê¾Àı£ºadb shell monkey -p com.htc.Weather --pct-appswitch 70 1000
+è°ƒæ•´å¯åŠ¨ Activity çš„ç™¾åˆ†æ¯”ã€‚åœ¨éšæœºé—´éš”é‡Œï¼ŒMonkey å°†æ‰§è¡Œä¸€ä¸ª startActivity() è°ƒç”¨ï¼Œä½œä¸ºæœ€å¤§ç¨‹åº¦è¦†ç›–åŒ…ä¸­å…¨éƒ¨Activity çš„ä¸€ç§æ–¹æ³•ã€‚
+ç¤ºä¾‹ï¼šadb shell monkey -p com.htc.Weather --pct-appswitch 70 1000
 --pct-anyevent<percent>
-µ÷ÕûÆäËüÀàĞÍÊÂ¼şµÄ°Ù·Ö±È¡£Ëü°üÂŞÁËËùÓĞÆäËüÀàĞÍµÄÊÂ¼ş£¬Èç£º°´¼ü¡¢ÆäËü²»³£ÓÃµÄÉè±¸°´Å¥¡¢µÈµÈ¡£
-Ê¾Àı£ºadb shell monkey -p com.htc.Weather --pct -anyevent 100 1000
-Ö¸¶¨¶à¸öÀàĞÍÊÂ¼şµÄ°Ù·Ö±È£º
+è°ƒæ•´å…¶å®ƒç±»å‹äº‹ä»¶çš„ç™¾åˆ†æ¯”ã€‚å®ƒåŒ…ç½—äº†æ‰€æœ‰å…¶å®ƒç±»å‹çš„äº‹ä»¶ï¼Œå¦‚ï¼šæŒ‰é”®ã€å…¶å®ƒä¸å¸¸ç”¨çš„è®¾å¤‡æŒ‰é’®ã€ç­‰ç­‰ã€‚
+ç¤ºä¾‹ï¼šadb shell monkey -p com.htc.Weather --pct -anyevent 100 1000
+æŒ‡å®šå¤šä¸ªç±»å‹äº‹ä»¶çš„ç™¾åˆ†æ¯”ï¼š
 adb shell monkey -pcom.htc.Weather --pct-anyevent 50 --pct-appswitch 50 1000
-×¢Òâ£º¸÷ÊÂ¼şÀàĞÍµÄ°Ù·Ö±È×ÜÊı²»ÄÜ³¬¹ı100%£»
+æ³¨æ„ï¼šå„äº‹ä»¶ç±»å‹çš„ç™¾åˆ†æ¯”æ€»æ•°ä¸èƒ½è¶…è¿‡100%ï¼›
 
-adb get-state , »ñÈ¡Éè±¸µÄ×´Ì¬
-adb kill-server , adb start-server , ½áÊø adb ·şÎñ£¬ Æô¶¯ adb ·şÎñ£¬Í¨³£Á½¸öÃüÁîÒ»ÆğÓÃ 
-adb logcat , ´òÓ¡ Android µÄÏµÍ³ÈÕÖ¾£¬Õâ¸ö¿ÉÒÔµ¥¶ÀÄÃ³öÀ´½²
-adb bugreport , ´òÓ¡dumpsys¡¢dumpstate¡¢logcatµÄÊä³ö£¬Ò²ÊÇÓÃÓÚ·ÖÎö´íÎó 
-adb uninstall , Ğ¶ÔØÓ¦ÓÃ
-adb reboot , ÖØÆô Android Éè±¸
-²»´øÈÎºÎÑ¡Ïî£ºÁĞ³öËùÓĞµÄÓ¦ÓÃµÄ°üÃû£¨²»ÖªµÀÔõÃ´ÕÒÓ¦ÓÃµÄ°üÃûµÄÍ¬Ñ§¿´ÕâÀï£© 
+adb get-state , è·å–è®¾å¤‡çš„çŠ¶æ€
+adb kill-server , adb start-server , ç»“æŸ adb æœåŠ¡ï¼Œ å¯åŠ¨ adb æœåŠ¡ï¼Œé€šå¸¸ä¸¤ä¸ªå‘½ä»¤ä¸€èµ·ç”¨ 
+adb logcat , æ‰“å° Android çš„ç³»ç»Ÿæ—¥å¿—ï¼Œè¿™ä¸ªå¯ä»¥å•ç‹¬æ‹¿å‡ºæ¥è®²
+adb bugreport , æ‰“å°dumpsysã€dumpstateã€logcatçš„è¾“å‡ºï¼Œä¹Ÿæ˜¯ç”¨äºåˆ†æé”™è¯¯ 
+adb uninstall , å¸è½½åº”ç”¨
+adb reboot , é‡å¯ Android è®¾å¤‡
+ä¸å¸¦ä»»ä½•é€‰é¡¹ï¼šåˆ—å‡ºæ‰€æœ‰çš„åº”ç”¨çš„åŒ…åï¼ˆä¸çŸ¥é“æ€ä¹ˆæ‰¾åº”ç”¨çš„åŒ…åçš„åŒå­¦çœ‹è¿™é‡Œï¼‰ 
 adb shell pm list package
--s£ºÁĞ³öÏµÍ³Ó¦ÓÃ
+-sï¼šåˆ—å‡ºç³»ç»Ÿåº”ç”¨
 adb shell pm list package -s 
--3£ºÁĞ³öµÚÈı·½Ó¦ÓÃ
+-3ï¼šåˆ—å‡ºç¬¬ä¸‰æ–¹åº”ç”¨
 adb shell pm list package -3
--f£ºÁĞ³öÓ¦ÓÃ°üÃû¼°¶ÔÓ¦µÄapkÃû¼°´æ·ÅÎ»ÖÃ
+-fï¼šåˆ—å‡ºåº”ç”¨åŒ…ååŠå¯¹åº”çš„apkååŠå­˜æ”¾ä½ç½®
 adb shell pm list package -f
-²éÕÒÈı·½Ó¦ÓÃÖĞÖªºõµÄ°üÃû¡¢apk´æ·ÅÎ»ÖÃ¡¢°²×°À´Ô´£º
+æŸ¥æ‰¾ä¸‰æ–¹åº”ç”¨ä¸­çŸ¥ä¹çš„åŒ…åã€apkå­˜æ”¾ä½ç½®ã€å®‰è£…æ¥æºï¼š
  adb shell pm list package -f -3 -i zhihu
-pm path ÁĞ³ö¶ÔÓ¦°üÃûµÄ .apk Î»ÖÃ£ºadb shell pm path com.tencent.mobileqq
-pm dump , ºó¸ú°üÃû£¬ÁĞ³öÖ¸¶¨Ó¦ÓÃµÄ dump ĞÅÏ¢£¬ÀïÃæÓĞ¸÷ÖÖĞÅÏ¢£¬×ÔĞĞ²é¿´
+pm path åˆ—å‡ºå¯¹åº”åŒ…åçš„ .apk ä½ç½®ï¼šadb shell pm path com.tencent.mobileqq
+pm dump , åè·ŸåŒ…åï¼Œåˆ—å‡ºæŒ‡å®šåº”ç”¨çš„ dump ä¿¡æ¯ï¼Œé‡Œé¢æœ‰å„ç§ä¿¡æ¯ï¼Œè‡ªè¡ŒæŸ¥çœ‹
 adb shell pm dump com.tencent.mobileqq
-adb shell am start -n com.android.camera/.Camera Æô¶¯Ïà»ú
-adb shell am start -S com.android.camera/.Camera ÏÈÍ£Ö¹Ä¿±êÔÙÆô¶¯
-adb shell am start -a android.intent.action.VIEW -d http://testerhome.com Æô¶¯ä¯ÀÀÆ÷´ò¿ªÍøÒ³
-adb shell am start -a android.intent.action.CALL -d tel:10086 Æô¶¯²¢²¦ºÅ10086
-am monitor , ¼à¿Ø crash Óë ANR
-am force-stop , ºó¸ú°üÃû£¬½áÊøÓ¦ÓÃ
-am startservice , Æô¶¯Ò»¸ö·şÎñ
-am broadcast , ·¢ËÍÒ»¸ö¹ã²¥
-adb shell input text test123456 ·¢ËÍÎÄ±¾ÄÚÈİ£¬²»ÄÜ·¢ËÍÖĞÎÄ
-adb shell screencap -p /sdcard/screen.png ½ØÍ¼
-adb shell screenrecord sdcard/record.mp4 Â¼ÖÆ
+adb shell am start -n com.android.camera/.Camera å¯åŠ¨ç›¸æœº
+adb shell am start -S com.android.camera/.Camera å…ˆåœæ­¢ç›®æ ‡å†å¯åŠ¨
+adb shell am start -a android.intent.action.VIEW -d http://testerhome.com å¯åŠ¨æµè§ˆå™¨æ‰“å¼€ç½‘é¡µ
+adb shell am start -a android.intent.action.CALL -d tel:10086 å¯åŠ¨å¹¶æ‹¨å·10086
+am monitor , ç›‘æ§ crash ä¸ ANR
+am force-stop , åè·ŸåŒ…åï¼Œç»“æŸåº”ç”¨
+am startservice , å¯åŠ¨ä¸€ä¸ªæœåŠ¡
+am broadcast , å‘é€ä¸€ä¸ªå¹¿æ’­
+adb shell input text test123456 å‘é€æ–‡æœ¬å†…å®¹ï¼Œä¸èƒ½å‘é€ä¸­æ–‡
+adb shell screencap -p /sdcard/screen.png æˆªå›¾
+adb shell screenrecord sdcard/record.mp4 å½•åˆ¶
 
 
-adb shell ps  ÕÒpid 
-adb shell cat /proc/"+Pid+"/net/dev" ¿´Á÷Á¿
+adb shell ps  æ‰¾pid 
+adb shell cat /proc/"+Pid+"/net/dev" çœ‹æµé‡
 
 
 
