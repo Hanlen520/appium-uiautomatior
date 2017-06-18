@@ -26,7 +26,7 @@ class Testlogin(unittest.TestCase):
         me.send_keys('319197149')
         password=self.driver.find_element_by_id('com.tencent.mobileqq:id/password')
         password.clear()
-        password.send_keys('lileilei.930423')
+        password.send_keys('lileilei.9304')
         self.driver.find_element_by_id('com.tencent.mobileqq:id/login').click()
         m=self.driver.find_element_by_id('com.tencent.mobileqq:id/conversation_head')
         if m is not None:
