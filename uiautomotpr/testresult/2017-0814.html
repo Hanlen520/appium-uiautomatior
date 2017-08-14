@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>爱学堂demo by uiautomator</h1>
-<p class='attribute'><strong>开始时间:</strong> 2017-08-12 17:12:22</p>
-<p class='attribute'><strong>耗时:</strong> 0:00:28.097068</p>
-<p class='attribute'><strong>测试结果:</strong> Pass 3</p>
+<p class='attribute'><strong>开始时间:</strong> 2017-08-14 12:42:31</p>
+<p class='attribute'><strong>耗时:</strong> 0:02:35.670767</p>
+<p class='attribute'><strong>测试结果:</strong> Pass 9 Failure 1</p>
 
 <p class='description'>测试结果</p>
 </div>
@@ -221,13 +221,13 @@ function showOutput(id, name) {
     <td>查看</td>
 </tr>
 
-<tr class='passClass'>
-    <td>TestaixuetangCase</td>
+<tr class='failClass'>
+    <td>lao_logintest.TestaixuetangCase</td>
+    <td>4</td>
     <td>3</td>
-    <td>3</td>
+    <td>1</td>
     <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',3)">详情</a></td>
+    <td><a href="javascript:showClassDetail('c1',4)">详情</a></td>
 </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
@@ -245,11 +245,86 @@ function showOutput(id, name) {
     <td colspan='5' align='center'>pass</td>
 </tr>
 
+<tr id='ft1.4' class='none'>
+    <td class='failCase'><div class='testcase'>testlogin_4</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.4')" >
+        fail</a>
+
+    <div id='div_ft1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.4: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python36\site-packages\ddt.py", line 139, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\appium-uiautomatior\uiautomotpr\lao_logintest.py", line 36, in testlogin
+    self.assertTrue(assert_m)
+AssertionError: False is not true
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python36\site-packages\ddt.py", line 139, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\appium-uiautomatior\uiautomotpr\lao_logintest.py", line 36, in testlogin
+    self.assertTrue(assert_m)
+AssertionError: False is not true
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>lao_xiugaitest.TestaixuetangCase</td>
+    <td>6</td>
+    <td>6</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',6)">详情</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testlogin_1</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testlogin_2</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt2.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testlogin_3</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt2.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testlogin_4</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt2.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testlogin_5</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt2.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testlogin_6</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
 <tr id='total_row'>
     <td>Total</td>
-    <td>3</td>
-    <td>3</td>
-    <td>0</td>
+    <td>10</td>
+    <td>9</td>
+    <td>1</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>
